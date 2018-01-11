@@ -4,7 +4,7 @@ class Helpers
     @user_id = session[:user_id]
     binding.pry
 
-    User.class.find_by_id(@user_id)
+    User.find_by_id(@user_id)
   end
 
   def self.is_logged_in?
