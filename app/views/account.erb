@@ -7,10 +7,9 @@
   </head>
   <body id="page-top">
     <%if User.is_logged_in%>
-      <%= "#{@user.username}"%>
-      <%= "#{@user.password}"%>
-      <%= "#{@user.balance}"%>
-    <%else
+      <%= "#{User.current_user}"%>
+    <%else%>
+      <a href="/"
     <a href="/"
   </body>
 </html>
