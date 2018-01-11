@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if User.is_logged_in
+    if @current_user
       erb :account
     end
     erb :error
