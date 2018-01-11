@@ -13,8 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.new(username: params["username"], password: params["password"], balance: params["balance"])
     @user.save
-    
-    @user.id = session[:user_id]
+    session[:user_id] = @user.id
 
     redirect '/account'
   end
