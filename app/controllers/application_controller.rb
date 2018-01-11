@@ -14,11 +14,11 @@ class ApplicationController < Sinatra::Base
     @user = User.find_by(:username => params[:username]
     if @user != nil && @user.password == params[:password]
       session[:user_id] = @user.id
-
+      redirect '/account'
+    else
     @user.save
 
 
-    redirect '/account'
   end
 
   get '/account' do
