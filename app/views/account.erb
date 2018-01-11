@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <%if User.is_logged_in%>
-      <%= "#{User.current_user}"%>
-    <%else%>
-      <a href="/">Home</a>
+      <%if User.is_logged_in%>
+        <%= "#{User.current_user}"%>
+      <%else%>
+        <a href="/">Home</a>
       <%end%>
     <a href="/logout">Log Out</a>
   </body>
