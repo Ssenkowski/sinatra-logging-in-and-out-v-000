@@ -1,5 +1,6 @@
 require_relative '../../config/environment'
 class ApplicationController < Sinatra::Base
+   register Sinatra::ActiveRecordExtension
   configure do
     set :views, Proc.new { File.join(root, "../views/") }
     enable :sessions unless test?
