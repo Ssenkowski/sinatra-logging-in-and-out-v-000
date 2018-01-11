@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <%= "#{@user.username}"%>
-    <%= "#{@user.password}"%>
-    <%= "#{@user.balance}"%>
+    <%if User.is_logged_in%>
+      <%= "#{@user.username}"%>
+      <%= "#{@user.password}"%>
+      <%= "#{@user.balance}"%>
+    <%else
+    <a href="/"
   </body>
 </html>
