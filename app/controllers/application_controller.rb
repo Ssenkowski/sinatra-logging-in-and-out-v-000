@@ -12,8 +12,8 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
 
-    session[:id]
-    
+    session[:user_id] = user_id
+
     redirect '/account'
   end
 
