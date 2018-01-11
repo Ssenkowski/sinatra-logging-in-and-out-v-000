@@ -1,6 +1,6 @@
 class Helpers
   
-  def self.current_user(:session)
+  def self.current_user(session)
       binding.pry
   end
 
