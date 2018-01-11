@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
 
+    redirect to :index
   end
 
   get '/account' do
